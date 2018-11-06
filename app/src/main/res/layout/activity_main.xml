@@ -9,11 +9,14 @@
 
     <TextView
         android:id="@+id/poids"
+        style="@style/Widget.AppCompat.TextView.SpinnerItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/textView"
         android:padding="10.5dp"
-        android:text="Poids :"
+        android:text="@string/poidstxt"
+        android:textColor="#FF0000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/nbrpoids"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -26,20 +29,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Poids"
+        android:hint="@string/poids"
         android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/tailletext"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="71dp" />
+        app:layout_constraintTop_toBottomOf="@+id/poids" />
 
     <TextView
         android:id="@+id/tailletext"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
-        app:layout_constraintTop_toBottomOf="@+id/tailletext"
-        tools:layout_editor_absoluteX="172dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tailletxt"
+        android:textColor="#FF0000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/taille"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/nbrpoids"
+        app:layout_constraintVertical_bias="0.714"
+        tools:ignore="NotSibling"
         tools:text="Taille :" />
 
 
@@ -47,39 +60,39 @@
         android:id="@+id/taille"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
         android:ems="10"
-        android:hint="taille "
+        android:hint="@string/taille"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toEndOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/nbrpoids" />
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toEndOf="@+id/guideline" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="218dp"
+        android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="24dp"
         android:orientation="horizontal"
         android:padding="18dp"
         app:layout_constraintBottom_toTopOf="@+id/mega"
-        tools:layout_editor_absoluteX="94dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintStart_toEndOf="@+id/guideline">
 
         <RadioButton
             android:id="@+id/metre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="Mètre" />
+            android:text="@string/m_tre" />
 
         <RadioButton
             android:id="@+id/centimetre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Centimètre" />
+            android:text="@string/centim_tre" />
 
     </RadioGroup>
 
@@ -88,28 +101,35 @@
         android:id="@+id/mega"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:layout_weight="1"
-        android:text="Mega fonction !"
-        tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="330dp" />
+        android:text="@string/mega_fonction"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="338dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/IMC"
         android:layout_width="105dp"
         android:layout_height="64dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/imc"
-        app:layout_constraintTop_toBottomOf="@+id/mega"
-        tools:layout_editor_absoluteX="94dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mega" />
 
     <Button
         android:id="@+id/raz"
         android:layout_width="92dp"
         android:layout_height="38dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/raz"
-        app:layout_constraintTop_toBottomOf="@+id/IMC"
-        tools:layout_editor_absoluteX="94dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IMC" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
