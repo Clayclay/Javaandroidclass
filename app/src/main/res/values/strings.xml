@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Java android class</string>
+    <string name="textView">textView</string>
+    <string name="editText">editText</string>
+    <string name="button">button</string>
+    <string name="raz">RAZ</string>
+    <string name="imc">Calculer l\'IMC</string>
+</resources>
