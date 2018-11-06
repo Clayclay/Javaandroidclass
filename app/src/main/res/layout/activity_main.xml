@@ -10,8 +10,8 @@
     <TextView
         android:id="@+id/poids"
         style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="41dp"
         android:hint="@string/textView"
         android:padding="10.5dp"
         android:text="@string/poidstxt"
@@ -106,11 +106,11 @@
         android:layout_weight="1"
         android:text="@string/mega_fonction"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="338dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="338dp" />
 
     <Button
-        android:id="@+id/IMC"
+        android:id="@+id/imc"
         android:layout_width="105dp"
         android:layout_height="64dp"
         android:layout_marginLeft="8dp"
@@ -129,7 +129,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/raz"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IMC" />
+        app:layout_constraintTop_toBottomOf="@+id/imc" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -137,5 +137,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp" />
+
+    <TextView
+
+        android:id="@+id/result"
+        android:layout_width="fill_parent"
+        android:layout_height="469dp"
+        android:layout_marginTop="8dp"
+        android:text="Vous devez cliquer sur le bouton « Calculer l'IMC » pour obtenir un résultat."        />
+
 
 </android.support.constraint.ConstraintLayout>

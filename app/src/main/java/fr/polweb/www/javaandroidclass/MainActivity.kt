@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
+/*
     private val clickListenerBoutons = View.OnClickListener { /* Réagir au clic pour les boutons 1 et 2*/ }
 
 
@@ -64,20 +64,39 @@ class MainActivity : AppCompatActivity() {
         super.onTouchEvent( event)
     }
 
+*/
 
-
-
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
+//// LES VUES //
 
 
-// Le Listener de txt
+
+    var imc = findViewById(R.id.IMC) as Button;
+    var raz = findViewById(R.id.raz) as Button;
+
+    var nbrpoids = findViewById(R.id.nbrpoids) as  EditText
+    var taille = findViewById(R.id.taille) as EditText
+
+    mega = findViewById(R.id.mega) as CheckBox;
+    radioGroup = findViewById(R.id.radioGroup)as RadioGroup;
+
+    var result = findViewById(R.id.result) as TextView
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+
+
+
+// ////////////////////////Le Listener de txt
+        ///////////////////////////////////////////
         taille?.addTextChangedListener(object : TextWatcher {
 
             override fun afterTextChanged(s: Editable) {}
@@ -103,23 +122,14 @@ class MainActivity : AppCompatActivity() {
 
 
 
-// Bouton
-        var imc = findViewById(R.id.IMC) as Button;
-        var raz = findViewById(R.id.raz) as Button;
 
 
 
-                imc.setOnTouchListener(touchListenerBouton1);
-               imc.setOnClickListener(clickListenerBoutons)
+            //imc.setOnTouchListener(touchListenerBouton1);
+           // imc.setOnClickListener(clickListenerBoutons);
 
-                   // poids/(taille²)
-
-                ;
-
-               raz.setOnClickListener(clickListenerBoutons);
-
-
-                //b3.setOnTouchListener(touchListenerBouton3);
+           // raz.setOnClickListener(clickListenerBoutons);
+        //b3.setOnTouchListener(touchListenerBouton3);
 
         }
 //fin Bouton
