@@ -5,11 +5,11 @@
     <string name="button">button</string>
     <string name="raz">RAZ</string>
     <string name="imc">Calculer l\'IMC</string>
-    <string name="taille">taille</string>
-    <string name="poids">Poids</string>
+    <string name="taille">taille </string>
+    <string name="poids">Poids </string>
     <string name="m_tre">Mètre</string>
     <string name="centim_tre">Centimètre</string>
     <string name="mega_fonction">Mega fonction !</string>
     <string name="poidstxt">Poids :</string>
-    <string name="tailletxt">Taill</string>
+    <string name="tailletxt">Taille :</string>
 </resources>
